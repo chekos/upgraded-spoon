@@ -15,4 +15,4 @@ jobs:
       - name: Install SnowSQL
         run: SNOWSQL_DEST=~/bin SNOWSQL_LOGIN_SHELL=~/.profile bash snowsql-1.2.31-linux_x86_64.bash
       - name: Test SnowSQL
-        run: snowsql -v
+        run: ~/bin/snowsql -v
