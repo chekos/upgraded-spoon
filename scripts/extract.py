@@ -3,7 +3,7 @@ import json
 
 # URL de la API
 api_url = "https://my.api.mockaroo.com/users.json"
-payload = {"key": "03ee11f0}
+payload = {"key": "03ee11f0"}
 
 # Hacer la petición a la API
 response = requests.get(api_url, params=payload)
