@@ -20,7 +20,7 @@ df = pd.read_csv('users_data.csv')
 cur = conn.cursor()
 
 # Cargar el DataFrame en la tabla de Snowflake
-write_pandas(conn, df, 'cf_usuarios')
+write_pandas(conn, df, 'CF_USUARIOS') # debe ser mayusculas aqui
 
 print("DataFrame cargado en Snowflake.")
 
