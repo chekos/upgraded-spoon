@@ -1,0 +1,18 @@
+name: Testing SnowSQL Installation
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  snowsql:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get SnowSQL
+        run: bdbdb
+      - name: Install SnowSQL
+        run: SNOWSQL_DEST=~/bin SNOWSQL_LOGIN_SHELL=~/.profile bash snowsql-linux_x86_64.bash
+      - name: Test SnowSQL
+        run: snowsql -v
