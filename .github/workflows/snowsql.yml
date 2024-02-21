@@ -10,9 +10,13 @@ jobs:
   snowsql:
     runs-on: ubuntu-latest
     steps:
+      - name: Obtener repo
+        uses: actions/checkout@v4.1.1
       - name: Get SnowSQL
         run: curl -O https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.2/linux_x86_64/snowsql-1.2.31-linux_x86_64.bash
       - name: Install SnowSQL
         run: SNOWSQL_DEST=~/bin SNOWSQL_LOGIN_SHELL=~/.profile bash snowsql-1.2.31-linux_x86_64.bash
       - name: Test SnowSQL
         run: ~/bin/snowsql -v
+      - name: Ejecuta script
+        run: ~/bin/snowsql -f ./scripts/usuarios.sql
