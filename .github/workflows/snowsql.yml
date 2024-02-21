@@ -20,3 +20,7 @@ jobs:
         run: ~/bin/snowsql -v
       - name: Ejecuta script
         run: ~/bin/snowsql -f ./scripts/usuarios.sql
+        env:
+          SNOWSQL_USER: ${{ secrets.SNOWSQL_USER }}
+          SNOWSQL_PWD: ${{ secrets.SNOWSQL_PWD }}
+          SNOWSQL_ACCOUNT: ${{ secrets.SNOWSQL_ACCOUNT }}
