@@ -1,1 +1,1 @@
-select * from source.raw.cf_usuarios limit 5;
+select count(*) from source.raw.cf_usuarios;
