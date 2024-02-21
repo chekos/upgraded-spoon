@@ -15,6 +15,7 @@ conn = snowflake.connector.connect(
 
 # Asumiendo que 'users_data.json' es el archivo con los datos extraídos
 df = pd.read_csv('users_data.csv')
+df.columns = df.columns.str.upper()
 
 # Crear cursor
 cur = conn.cursor()
