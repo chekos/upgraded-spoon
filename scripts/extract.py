@@ -3,10 +3,10 @@ import json
 
 # URL de la API
 api_url = "https://my.api.mockaroo.com/users.json"
-payload = {"key": "03ee11f0"}
+headers = {"x-api-key": "03ee11f0"}
 
 # Hacer la petición a la API
-response = requests.get(api_url, params=payload)
+response = requests.get(api_url, headers=headers)
 
 # Verificar que la petición fue exitosa
 if response.status_code == 200:
